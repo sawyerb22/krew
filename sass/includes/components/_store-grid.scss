@@ -1,0 +1,90 @@
+$num-of-tiles: 4; //Set this in your stylesheet to achieve desired tile numbers
+$gutter: 0.5em;
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+.store-content {
+  max-width: 1375px;
+  margin: 0 auto;
+}
+
+.grid-item_demo {
+  background-color: rgba(0,0,0,0.1);
+  padding: 1.5em;
+  border-radius: 0.2em;
+  text-align: center;
+}
+
+/*==============================
+krew-content
+==============================*/
+.krew-content {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+/*==============================
+  Grid
+================================*/
+
+.store-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-left: -$gutter;
+  margin-right: -$gutter;
+  margin-bottm: 0.5em;
+}
+
+/*=============================
+ Grid No-Gutter
+==============================*/
+
+.grid--gutterless {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.grid--gutterless > .grid-item {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+
+/* =============================
+  Grid-items
+================================*/
+.grid-full {
+  width: 100%;
+  padding-bottom: $gutter * 2;
+}
+.grid-item {
+  width: calc(100% / #{$num-of-tiles});
+  padding-left: $gutter;
+  padding-right: $gutter;
+  padding-bottom:  $gutter * 2;
+}
+
+@media (max-width: 1375px) {
+  .store-content {
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 20px;
+  }
+}
+@media (max-width: 750px) {
+  .store-content {
+    padding: 0 5px;
+  }
+  .store-grid {
+    margin-left: initial;
+    margin-right: initial;
+  }
+  .grid-item {
+    width: 50%;
+  }
+
+}

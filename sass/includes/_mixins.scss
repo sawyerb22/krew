@@ -1,0 +1,84 @@
+@import 'variables';
+//========== MIXINS ==============
+
+/*=================================
+Colors
+.class names need to be
+the same as variable names
+=================================*/
+@mixin button-colors($color, $bg-color , $custom-color:"") {
+  .button {
+    &.krew-#{$color} {
+      background-color: $bg-color;
+      color: #FFFFFF;
+      color: unquote($custom-color);
+      &.inverse {
+        background-color: transparent;
+        border: 2px solid $bg-color !important;
+        color: $bg-color;
+        &:hover {
+          background-color: $bg-color;
+          color: #FFFFFF;
+          color: unquote($custom-color);
+        }
+      }
+    }
+  }
+}
+@include button-colors('blue', $krew-blue);
+@include button-colors('orange', $krew-orange);
+@include button-colors('green', $krew-green);
+@include button-colors('black', $krew-black);
+@include button-colors('purple', $krew-purple);
+@include button-colors('gray', $krew-gray6);
+@include button-colors('white', $krew-gray1, $krew-gray6);
+
+
+@mixin krew-colors($color, $bg-color , $custom-color:"") {
+  .krew-#{$color} {
+    color: $bg-color;
+    &.bg-fill {
+      background-color: $bg-color;
+      color: #fff;
+      color: unquote($custom-color);
+    }
+    &.bg-fill-disabled {
+      background-color: $bg-color;
+      color: $krew-black;
+      color: unquote($custom-color);
+    }
+  }
+}
+
+@include krew-colors('blue', $krew-blue);
+@include krew-colors('green', $krew-green);
+@include krew-colors('purple', $krew-purple);
+@include krew-colors('orange', $krew-orange);
+@include krew-colors('black', $krew-black);
+@include krew-colors('gray1', $krew-gray1, $custom-color:"#373837");
+@include krew-colors('gray2', $krew-gray2, $custom-color:"#373837");
+@include krew-colors('gray3', $krew-gray3, $custom-color:"#373837");
+@include krew-colors('gray4', $krew-gray4);
+@include krew-colors('gray5', $krew-gray5);
+@include krew-colors('gray6', $krew-gray6);
+@include krew-colors('well', $krew-well, $custom-color:"#373837");
+
+.disabled {
+  @include krew-colors('gray5', $krew-gray5);
+}
+
+//Well Border and header background
+@mixin well-colors($color, $well-color, $custom-color:"") {
+  .well-bg__#{$color} {
+    border-color: $well-color;
+    h3.well-header {
+      background-color: $well-color;
+      color: #fff;
+      color: unquote($custom-color);
+    }
+  }
+}
+@include well-colors('green', $krew-green);
+@include well-colors('blue', $krew-blue);
+@include well-colors('orange', $krew-orange);
+@include well-colors('purple', $krew-purple);

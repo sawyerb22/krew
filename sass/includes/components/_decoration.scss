@@ -1,0 +1,89 @@
+//====== Block quote =========
+
+.blockquote {
+  border-top: 10px solid;
+  border-bottom: 10px solid;
+  border-color: $blockquote-border;
+  padding: 8px 0;
+  h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    font-weight: bold;
+  }
+  p {
+    position: relative;
+    bottom: 5px;
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+    font-weight: 600;
+    font-style: italic;
+  }
+  span {
+    color: $krew-black;
+    letter-spacing: 0;
+    &.currency-type {
+      font-size: 13px;
+      position: absolute;
+      top: 5px;
+      padding-left: 3px;
+      font-weight: 500;
+    }
+  }
+}
+// For disclaimer text
+.disclaimer {
+  p.fine-print {
+    padding-top: 0;
+    font-size: .85em;
+    text-transform: none;
+    margin: 0;
+    font-weight: 700;
+  }
+}
+
+
+//===== Text Drawers ======
+.krew-drawer {
+  margin: 10px 0;
+  p {
+    display: inline-block;
+  }
+  span {
+    display: inline-block;
+    content: 'Read More..';
+    color: $krew-blue;
+    font-weight: bold;
+    font-size: 12px;
+    position: relative;
+    left: 5px;
+    cursor: pointer;
+  }
+  .drawer-inner {
+    display: none;
+    margin: 10px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $krew-gray3;
+  }
+  &.drawer-open {
+    span {
+      display: none;
+    }
+    .drawer-inner {
+      display: block;
+      p {
+        display: inline;
+      }
+      span {
+        display: inline;
+        content: 'Read Less..';
+        color: $krew-blue;
+        position: relative;
+        font-weight: bold;
+        left: 5px;
+        cursor: pointer;
+      }
+    }
+  }
+}

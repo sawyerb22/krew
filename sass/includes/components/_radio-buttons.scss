@@ -1,0 +1,198 @@
+//======= Radio Buttons =========
+
+$radioColor: #373837;
+
+.radio {
+  input[type='radio'] {
+    display: none;
+    -webkit-display: none;
+    + label {
+      position: relative;
+      display: inline-block;
+      margin: 10px 32px;
+      font-size: 1em;
+      font-weight: 400;
+      line-height: 21px;
+      color: $radioColor;
+      white-space: nowrap;
+      -webkit-transition: all 0.4s ease-in-out;
+      -moz-transition: all 0.4s ease-in-out;
+      -ms-transition: all 0.4s ease-in-out;
+      -o-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+      cursor: pointer;
+      &:after {
+        content: " ";
+        border-radius: 0;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 0;
+        left: -27px;
+        -webkit-box-shadow: 0 0 0 0 transparent inset,  0 0 0 0 transparent inset, 0 0 0 .019em $krew-black inset, 0 0 0 0 transparent;
+        -moz-box-shadow: 0 0 0 0 transparent inset,  0 0 0 0 transparent inset, 0 0 0 .019em $krew-black inset, 0 0 0 0 transparent;
+        box-shadow: 0 0 0 0 transparent inset, 0 0 0 0 transparent inset, 0 0 0 0.17em $krew-black inset, 0 0 0 0 transparent;
+        -webkit-transition: all 0.4s ease-in-out;
+        -moz-transition: all 0.4s ease-in-out;
+        -ms-transition: all 0.4s ease-in-out;
+        -o-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
+      }
+      &:hover {
+        color: $radioColor;
+      }
+      input[type='text'] {
+        width: 55px;
+        border: 1px solid #e0e0e0;
+        position: relative;
+        bottom: 5px;
+        padding: 5px;
+        outline: none;
+        font-weight: bold;
+        text-align: center;
+        @media (min-width: $xl-desktop) {
+          margin-top: 15px;
+        }
+      }
+    }
+    &:checked + label {
+      &:after {
+        -webkit-box-shadow: 0 0 0 1em $radioColor inset, 0 0 0 1em #f2f9ff inset, 0 0 0 1.2em $radioColor inset, 0 0 0 1.2em transparent;
+        -moz-box-shadow: 0 0 0 1em $radioColor inset, 0 0 0 1em #f2f9ff inset, 0 0 0 1.2em $radioColor inset, 0 0 0 1.2em transparent;
+        box-shadow: 0 0 0 1em $radioColor inset, 0 0 0 1em #f2f9ff inset, 0 0 0 1.2em $radioColor inset, 0 0 0 1.2em transparent;
+      }
+      &:hover:after {
+        -webkit-box-shadow: 0 0 0 1em $radioColor inset, 0 0 0 1em #f2f9ff inset, 0 0 0 1.2em $radioColor inset, 0 0 0 1.2em transparent;
+        -moz-box-shadow: 0 0 0 1em $radioColor inset, 0 0 0 1em #f2f9ff inset, 0 0 0 1.2em $radioColor inset, 0 0 0 1.2em transparent;
+        box-shadow: 0 0 0 1em $radioColor inset, 0 0 0 1em #f2f9ff inset, 0 0 0 1.2em $radioColor inset, 0 0 0 1.2em transparent;
+      }
+    }
+  }
+
+  //======== Radio Utility Classes ===========
+  &.radius {
+    input[type='radio']{
+      + label {
+        &:after {
+          border-radius: 50px;
+        }
+      }
+    }
+  }
+  &.krew-blue {
+    input[type='radio'] + label{
+      &:after {
+        -webkit-box-shadow: 0 0 0 0 transparent inset,  0 0 0 0 transparent inset, 0 0 0 .17em $krew-blue inset, 0 0 0 0 transparent;
+        -moz-box-shadow: 0 0 0 0 transparent inset,  0 0 0 0 transparent inset, 0 0 0 .17em $krew-blue inset, 0 0 0 0 transparent;
+        box-shadow: 0 0 0 0 transparent inset,  0 0 0 0 transparent inset, 0 0 0 .17em $krew-blue inset, 0 0 0 0 transparent;
+      }
+    }
+    input[type='radio'] {
+      &:checked + label {
+        &:after {
+          -webkit-box-shadow: 0 0 0 1em $krew-blue inset, 0 0 0 1em #f2f9ff inset, 0 0 0 1.2em $krew-blue inset, 0 0 0 1.2em transparent;
+          -moz-box-shadow: 0 0 0 1em $krew-blue inset, 0 0 0 1em #f2f9ff inset, 0 0 0 1.2em $krew-blue inset, 0 0 0 1.2em transparent;
+          box-shadow: 0 0 0 1em $krew-blue inset, 0 0 0 1em #f2f9ff inset, 0 0 0 1.2em $krew-blue inset, 0 0 0 1.2em transparent;
+        }
+        &:hover:after {
+          -webkit-box-shadow: 0 0 0 1em $krew-blue inset, 0 0 0 1em #f2f9ff inset, 0 0 0 1.2em $krew-blue inset, 0 0 0 1.2em transparent;
+          -moz-box-shadow: 0 0 0 1em $krew-blue inset, 0 0 0 1em #f2f9ff inset, 0 0 0 1.2em $krew-blue inset, 0 0 0 1.2em transparent;
+          box-shadow: 0 0 0 1em $krew-blue inset, 0 0 0 1em #f2f9ff inset, 0 0 0 1.2em $krew-blue inset, 0 0 0 1.2em transparent;
+        }
+      }
+    }
+  }
+  &.krew-orange {
+    input[type='radio'] + label{
+      &:after {
+        -webkit-box-shadow: 0 0 0 0 transparent inset,  0 0 0 0 transparent inset, 0 0 0 .17em $krew-orange inset, 0 0 0 0 transparent;
+        -moz-box-shadow: 0 0 0 0 transparent inset,  0 0 0 0 transparent inset, 0 0 0 .17em $krew-orange inset, 0 0 0 0 transparent;
+        box-shadow: 0 0 0 0 transparent inset,  0 0 0 0 transparent inset, 0 0 0 .17em $krew-orange inset, 0 0 0 0 transparent;
+      }
+    }
+    input[type='radio'] {
+      &:checked + label {
+        &:after {
+          -webkit-box-shadow: 0 0 0 1em $krew-orange inset, 0 0 0 1em #f2f9ff inset, 0 0 0 1.2em $krew-orange inset, 0 0 0 1.2em transparent;
+          -moz-box-shadow: 0 0 0 1em $krew-orange inset, 0 0 0 1em #f2f9ff inset, 0 0 0 1.2em $krew-orange inset, 0 0 0 1.2em transparent;
+          box-shadow: 0 0 0 1em $krew-orange inset, 0 0 0 1em #f2f9ff inset, 0 0 0 1.2em $krew-orange inset, 0 0 0 1.2em transparent;
+        }
+        &:hover:after {
+          -webkit-box-shadow: 0 0 0 1em $krew-orange inset, 0 0 0 1em #f2f9ff inset, 0 0 0 1.2em $krew-orange inset, 0 0 0 1.2em transparent;
+          -moz-box-shadow: 0 0 0 1em $krew-orange inset, 0 0 0 1em #f2f9ff inset, 0 0 0 1.2em $krew-orange inset, 0 0 0 1.2em transparent;
+          box-shadow: 0 0 0 1em $krew-orange inset, 0 0 0 1em #f2f9ff inset, 0 0 0 1.2em $krew-orange inset, 0 0 0 1.2em transparent;
+        }
+      }
+    }
+  }
+  &.krew-green {
+    input[type='radio'] + label{
+      &:after {
+        -webkit-box-shadow: 0 0 0 0 transparent inset,  0 0 0 0 transparent inset, 0 0 0 .17em $krew-green inset, 0 0 0 0 transparent;
+        -moz-box-shadow: 0 0 0 0 transparent inset,  0 0 0 0 transparent inset, 0 0 0 .17em $krew-green inset, 0 0 0 0 transparent;
+        box-shadow: 0 0 0 0 transparent inset,  0 0 0 0 transparent inset, 0 0 0 .17em $krew-green inset, 0 0 0 0 transparent;
+      }
+    }
+    input[type='radio'] {
+      &:checked + label {
+        &:after {
+          -webkit-box-shadow: 0 0 0 1em $krew-green inset, 0 0 0 1em #f2f9ff inset, 0 0 0 1.2em $krew-green inset, 0 0 0 1.2em transparent;
+          -moz-box-shadow: 0 0 0 1em $krew-green inset, 0 0 0 1em #f2f9ff inset, 0 0 0 1.2em $krew-green inset, 0 0 0 1.2em transparent;
+          box-shadow: 0 0 0 1em $krew-green inset, 0 0 0 1em #f2f9ff inset, 0 0 0 1.2em $krew-green inset, 0 0 0 1.2em transparent;
+        }
+        &:hover:after {
+          -webkit-box-shadow: 0 0 0 1em $krew-green inset, 0 0 0 1em #f2f9ff inset, 0 0 0 1.2em $krew-green inset, 0 0 0 1.2em transparent;
+          -moz-box-shadow: 0 0 0 1em $krew-green inset, 0 0 0 1em #f2f9ff inset, 0 0 0 1.2em $krew-green inset, 0 0 0 1.2em transparent;
+          box-shadow: 0 0 0 1em $krew-green inset, 0 0 0 1em #f2f9ff inset, 0 0 0 1.2em $krew-green inset, 0 0 0 1.2em transparent;
+        }
+      }
+    }
+  }
+  &.krew-purple {
+    input[type='radio'] + label{
+      &:after {
+        -webkit-box-shadow: 0 0 0 0 transparent inset,  0 0 0 0 transparent inset, 0 0 0 .17em $krew-purple inset, 0 0 0 0 transparent;
+        -moz-box-shadow: 0 0 0 0 transparent inset,  0 0 0 0 transparent inset, 0 0 0 .17em $krew-purple inset, 0 0 0 0 transparent;
+        box-shadow: 0 0 0 0 transparent inset,  0 0 0 0 transparent inset, 0 0 0 .17em $krew-purple inset, 0 0 0 0 transparent;
+      }
+    }
+    input[type='radio'] {
+      &:checked + label {
+        &:after {
+          -webkit-box-shadow: 0 0 0 1em $krew-purple inset, 0 0 0 1em #f2f9ff inset, 0 0 0 1.2em $krew-purple inset, 0 0 0 1.2em transparent;
+          -moz-box-shadow: 0 0 0 1em $krew-purple inset, 0 0 0 1em #f2f9ff inset, 0 0 0 1.2em $krew-purple inset, 0 0 0 1.2em transparent;
+          box-shadow: 0 0 0 1em $krew-purple inset, 0 0 0 1em #f2f9ff inset, 0 0 0 1.2em $krew-purple inset, 0 0 0 1.2em transparent;
+        }
+        &:hover:after {
+          -webkit-box-shadow: 0 0 0 1em $krew-purple inset, 0 0 0 1em #f2f9ff inset, 0 0 0 1.2em $krew-purple inset, 0 0 0 1.2em transparent;
+          -moz-box-shadow: 0 0 0 1em $krew-purple inset, 0 0 0 1em #f2f9ff inset, 0 0 0 1.2em $krew-purple inset, 0 0 0 1.2em transparent;
+          box-shadow: 0 0 0 1em $krew-purple inset, 0 0 0 1em #f2f9ff inset, 0 0 0 1.2em $krew-purple inset, 0 0 0 1.2em transparent;
+        }
+      }
+    }
+  }
+  &.disabled {
+    input[type='radio'] + label{
+      &:after {
+        -webkit-box-shadow: 0 0 0 0 transparent inset,  0 0 0 0 transparent inset, 0 0 0 .17em $krew-gray4 inset, 0 0 0 0 transparent;
+        -moz-box-shadow: 0 0 0 0 transparent inset,  0 0 0 0 transparent inset, 0 0 0 .17em $krew-gray4 inset, 0 0 0 0 transparent;
+        box-shadow: 0 0 0 0 transparent inset,  0 0 0 0 transparent inset, 0 0 0 .17em $krew-gray4 inset, 0 0 0 0 transparent;
+      }
+    }
+    input[type='radio'] {
+      &:checked + label {
+        &:after {
+          -webkit-box-shadow: 0 0 0 1em $krew-gray4 inset, 0 0 0 1em #f2f9ff inset, 0 0 0 1.2em $krew-gray4 inset, 0 0 0 1.2em transparent;
+          -moz-box-shadow: 0 0 0 1em $krew-gray4 inset, 0 0 0 1em #f2f9ff inset, 0 0 0 1.2em $krew-gray4 inset, 0 0 0 1.2em transparent;
+          box-shadow: 0 0 0 1em $krew-gray4 inset, 0 0 0 1em #f2f9ff inset, 0 0 0 1.2em $krew-gray4 inset, 0 0 0 1.2em transparent;
+        }
+        &:hover:after {
+          -webkit-box-shadow: 0 0 0 1em $krew-gray4 inset, 0 0 0 1em #f2f9ff inset, 0 0 0 1.2em $krew-gray4 inset, 0 0 0 1.2em transparent;
+          -moz-box-shadow: 0 0 0 1em $krew-gray4 inset, 0 0 0 1em #f2f9ff inset, 0 0 0 1.2em $krew-gray4 inset, 0 0 0 1.2em transparent;
+          box-shadow: 0 0 0 1em $krew-gray4 inset, 0 0 0 1em #f2f9ff inset, 0 0 0 1.2em $krew-gray4 inset, 0 0 0 1.2em transparent;
+        }
+      }
+    }
+  }
+}

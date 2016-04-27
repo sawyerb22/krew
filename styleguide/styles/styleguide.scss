@@ -1,0 +1,265 @@
+/* =========================================================
+!!!NOTE!!!
+This stylesheet is only meant to be included in the SOC
+development only styleguide.html template.
+It is NOT! To be used in production in any way.
+Please Disregaurd this stylesheet unless customizing the
+SendOutCards Internal StyleGuide Template.
+!!!END NOTE!!!
+========================================================== */
+
+@import 'includes/toast-overview';
+
+$krew-blue: #50E3D5;
+$krew-red: #FF8E86;
+
+$copy-color: #7A7F85;
+$active-nav: $krew-blue;
+
+.wrapper {
+  top: 0;
+}
+figure {
+  margin: 1em 40px;
+}
+.bottom-footer, #nav-desktop{
+  display: none!important;
+}
+
+
+.content-wrapper {
+  width: calc(100% - 258px);
+  position: absolute;
+  right: 0;
+  top: -5px;
+  padding: 15px 25px;
+  background: #F7F8FB;
+}
+.style-nav {
+  width: 255px;
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  left: 0;
+  padding: 15px;
+  padding-top: 60px;
+  box-shadow: 1px 0 3px 0 #ccc;
+  background-color: #FFF;
+  a {
+    display: block;
+    padding-left: 10px;
+    font-size: .93em;
+    font-weight: 400;
+    line-height: 1.85em;
+    color: #373837;
+    font-family: 'proxima nova', 'Oxygen';
+    &:hover {
+      font-weight: bold;
+    }
+    &.selected {
+      font-weight: bold;
+      color: $active-nav;
+    }
+  }
+  .img-top {
+    text-align: center;
+    margin-bottom: 2em;
+    img {
+      width: 90px;
+    }
+    h4 {
+      text-transform: none;
+    }
+  }
+}
+h2.heading {
+  font-size: 24px;
+  text-transform: none;
+  font-weight: 500;
+  text-align: left;
+  color: $copy-color;
+  border-bottom: 1px solid #7A7F85;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+p {
+  color: $copy-color;
+}
+.component {
+  padding-top: 65px;
+  margin-bottom: 3.5em;
+}
+.color {
+  .bg-fill {
+    font-weight: bold;
+  }
+}
+span, em {
+  font-family: monospace;
+  &.em {
+    font-weight: 600;
+    color: #00BBC6;
+    font-size: 1.12em;
+    padding: 0 3px;
+  }
+  &.em-green {
+    @extend .em;
+    color: #51B964;
+  }
+  &.em-purple {
+    @extend .em;
+    color: #A473B1
+  }
+  &.helper {
+    font-weight: 600;
+    color: $krew-blue;
+    font-size: 1.12em;
+    padding: 0 4px;
+    &.orange {
+      color: #F3785E;
+    }
+  }
+}
+.desc {
+  h3 {
+    font-weight: bold;
+    text-transform: none;
+    margin-bottom: .93em;
+  }
+  p {
+    font-weight: 600;
+    margin-bottom: 2em;
+    font-size: 0.933em;
+    &.center {
+      text-align: center;
+    }
+  }
+  span {
+    font-family: monospace;
+    &.em {
+      font-weight: 600;
+      color: #00BBC6;
+      font-size: 1.12em;
+      padding: 0 3px;
+    }
+    &.em-green {
+      @extend .em;
+      color: #51B964;
+    }
+    &.em-purple {
+      @extend .em;
+      color: #A473B1
+    }
+    &.helper {
+      font-weight: 600;
+      color: $krew-red;
+      font-size: 1.12em;
+      padding: 0 4px;
+      &.orange {
+        color: #F3785E;
+      }
+    }
+  }
+}
+.pre-link {
+  pre {
+    margin-top: 0;
+    margin-bottom: 2em !important;
+    padding-top: 0;
+    padding-bottom: 0;
+    box-shadow: 0 5px 10px 2px #EAEDF7;
+  }
+}
+form {
+  margin-top: 3em;
+  width: 500px;
+}
+
+.color .store-grid {
+  margin-top: 3em;
+}
+.krew-select {
+  max-width: 300px;
+}
+.krew-select-value {
+  width: 300px;
+}
+.krew-select-options {
+  width: 300px;
+  top: 143px !important;
+  border: 1px solid #ccc;
+}
+
+//Code Highlighting
+.linking pre {
+  margin-bottom: 0;
+}
+.half {
+  width: 50%;
+}
+
+code {
+  font-family: monaco, monospace;
+  white-space: pre-wrap;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  &.hljs {
+    background-color: #FDFDFF;
+    padding: 1em;
+    font-size: 0.965em;
+    line-height: 1.65;
+    font-family: monaco, monospace;
+    border-radius: 2px;
+    box-shadow: 0 5px 10px 2px #EAEDF7;
+  }
+}
+pre {
+  display: inherit;
+  padding: inherit;
+  margin: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  word-break: inherit;
+  word-wrap: inherit;
+  color: inherit;
+  background-color: inherit;
+  border: none;
+  border-radius: 3px;
+  padding: 25px 0;
+  span {
+    font-family: monaco, monospace;
+  }
+}
+.store-grid {
+  &.color-tiles {
+    .grid-item {
+      width: calc(485px / 4);
+      p {
+        margin: 0;
+        margin-top: 10px;
+        padding: 0;
+        font-weight: 200;
+      }
+    }
+    .tile {
+      position: relative;
+      width: 100px;
+      height: 90px;
+      box-shadow: 3px 2px 3px 0 #ccc;
+      .footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        height: 25px;
+        color: #585C61;
+        overflow: hidden;
+        font-size: 13px;
+        font-weight: 500;
+        font-family: proxima nova;
+        line-height: 29px;
+      }
+    }
+  }
+}

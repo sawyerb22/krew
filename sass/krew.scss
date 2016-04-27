@@ -1,0 +1,127 @@
+/* =========================================================
+!!!NOTE!!!
+This is the SendOutCards Styleguide, its sole purpose is to
+provide a consistent and User Friendly experience across
+the SendOutCards website. Any Edits to this stylesheet will
+be reflected SITE WIDE!!
+
+Please DO NOT customize this stylesheet unless you were told
+to do so.
+
+!!!END NOTE!!!
+========================================================== */
+
+
+//Component Includes
+@import 'includes/variables';
+@import 'includes/bootstrap_grid.scss';
+@import 'includes/krew-includes';
+
+//Media Queries look to last line
+
+/*======================
+Resets
+========================*/
+
+html, body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  width: 100%;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-family: $secondary;
+  text-transform: uppercase;
+  font-weight: 500;
+  &.museo {
+    font-family: $headings;
+  }
+}
+p,span,button,a {
+  font-family: $secondary;
+}
+a {
+  text-decoration: none;
+  &:hover, &:active, &:visited, &:focus {
+    text-decoration: none;
+  }
+}
+p {
+  color: $krew-black;
+}
+ul {
+  padding-left: 0;
+  list-style: none;
+  li {
+    list-style: none;
+  }
+}
+
+.alert-warning {
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+  color: #8a6d3b;
+}
+.no-scrolling {
+  overflow: hidden;
+}
+.museo {
+  font-family: $headings;
+}
+.radio label, .checkbox label {
+  padding-left: 0;
+}
+.button {
+  border: 0 !important;
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+/*=================================
+Typography
+changing the font size is controlled
+by changing the % on the body
+font size in our queries.scss
+=================================*/
+body {
+  font-size: 100%;
+}
+p, .paragraph {
+  font-size: .95em;
+  line-height: 1.4em;
+  padding: 5px 0;
+}
+h1 {
+  font-size: 2.2em;
+  line-height: 1.3em;
+}
+h2 {
+  font-size: 1.7em;
+  line-height: 1.3em;
+}
+h3 {
+  font-size: 1.5em;
+  line-height: 1.3em;
+}
+h4 {
+  font-size: 1.253em;
+  line-height: 1.3em;
+}
+h5 {
+  font-size: 1em;
+  line-height: 1.3em;
+}
+h6 {
+  font-size: .75em;
+  line-height: 1.3em;
+}
+
+
+//Media Queries
+@import 'includes/queries';

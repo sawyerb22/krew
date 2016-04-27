@@ -1,0 +1,105 @@
+//====== Select Boxes ========
+
+.krew-select {
+  position: relative;
+}
+.krew-select-hidden {
+  display: none;
+  visibility: hidden;
+  padding-right: 10px;
+}
+.krew-select {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  text-align: left;
+  font-size: 1em;
+  color: $krew-black;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 18px;
+  border: 1px solid #EBECEC;
+  &.active-select {
+    .krew-select-value {
+      background-color: #E2E2E2;
+      &:after {
+        -ms-transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+        top: 15px;
+        border-color: transparent transparent $krew-gray4 transparent;
+      }
+    }
+    .krew-select-options {
+      display: block;
+      width: 100%;
+      max-height: 325px;
+      overflow-y: auto;
+      border: 1px solid #EBECEC;
+    }
+  }
+}
+.krew-select-value {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: $krew-gray1;
+  padding: 12px 25px 14px 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 300;
+  &:after {
+    content: "\e61d";
+    font-family: 'icomoon';
+    font-size: 17px;
+    color: $krew-blue;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+  }
+}
+
+.krew-select-options {
+  display: none;
+  position: absolute;
+  top: 125px;
+  right: 0;
+  left: 0;
+  z-index: 11;
+  max-height: 0;
+  width: 100%;
+  white-space: nowrap;
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: $krew-gray1;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: all 0.15s cubic-bezier(0.35, 0, 0.25, 1);
+  transition: all 0.15s cubic-bezier(0.35, 0, 0.25, 1);
+  li {
+    width: 90%;
+    margin: 0 auto;
+    padding: 12px 0;
+    border-top: 1px solid $krew-black;
+    text-transform: uppercase;
+    font-size: 0.875em;
+    font-weight: 400;
+    &:hover {
+      color: $krew-gray5;
+      background: $krew-gray2;
+    }
+    &:first-child {
+      border-top: 0;
+    }
+    &[rel="hide"] {
+      display: none;
+    }
+  }
+}

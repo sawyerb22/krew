@@ -1,0 +1,43 @@
+
+//======= Buttons =========
+
+.button {
+  padding: 10px 25px;
+  border: none;
+  box-shadow: none;
+  font-weight: 500;
+  font-family: $secondary;
+  font-size: .9em;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #fff;
+  z-index: 40;
+  outline: none;
+  max-width: 230px;
+  margin: .5em 0;
+  &:hover, &:active, &:visited, &:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  &.krew-blank {
+    background-color: transparent;
+    border: none;
+    color: $krew-gray5;
+  }
+  &.disabled {
+    cursor: not-allowed;
+    color: $krew-gray4;
+    border: 2px solid $krew-gray4!important;
+    padding: 8px 15px;
+    &:hover {
+      cursor: not-allowed;
+    }
+    &:disabled {
+      background: transparent;
+      cursor: not-allowed;
+    }
+  }
+}

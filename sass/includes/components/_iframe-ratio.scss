@@ -1,0 +1,19 @@
+//======== Video ==========
+
+.iframe-ratio {
+  position: relative;
+  //The calc function can be used if we put styles on our iframe containers, in order to make it fit the correct ratio.
+  //ex. width: calc(56.25% - 50px); where 50px is margin set on a containing div
+  padding-bottom: calc(56.25%);
+  height: 0;
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(52, 48, 48, 0.33);
+    border-radius: 3px;
+  }
+}
+

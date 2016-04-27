@@ -1,0 +1,27 @@
+.krew-alert {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 15px;
+  h1,h2,h3,h4,h5,h6,p,span {
+    padding: 0;
+    margin: 0;
+    color: #FFFFFF;
+    text-transform: capitalize;
+    font-size: 1.53em;
+  }
+  &.krew-green {
+    background-color: $krew-green;
+  }
+  &.krew-blue {
+    background-color: $krew-blue;
+  }
+  &.krew-orange {
+    background-color: $krew-orange;
+  }
+  &.krew-purple {
+    background-color: $krew-purple;
+  }
+}
+

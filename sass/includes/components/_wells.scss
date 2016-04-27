@@ -1,0 +1,22 @@
+.krew-well {
+  position: relative;
+  border: 1px solid;
+  padding: 25px;
+  margin: 25px 0;
+  //Utility Classes
+  &.has-header {
+    padding-top: 75px;
+  }
+ //Colors controlled in a mixin inside of _krew-includes.scss
+
+  // Header
+  h3.well-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: 100%;
+    padding: 10px 15px;
+    text-transform: capitalize;
+  }
+}

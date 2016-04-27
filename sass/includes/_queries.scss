@@ -1,0 +1,84 @@
+/* =========================================================
+!!!NOTE!!!
+These are the standardized Krew Framework Media Queries,
+any edits to this file need to be approved by the
+Front End Team. Queries are set by a specific device
+size range,
+eg. $phone, $tablet, $desktop, $xl-screen
+
+All Changes will effect the entire site as this Framework
+is used sitewide.
+
+Please DO NOT customize this stylesheet unless you were told
+to do so.
+
+!!!END NOTE!!!
+========================================================== */
+
+@import 'variables';
+
+//Queries
+@media (max-width: $phone) {
+  //font size
+  body {
+    font-size: 10px;
+  }
+  h1,h2,h3,h4,h5 {
+    line-height: 1.1em;
+  }
+  p, .paragraph {
+    font-size: 11px;
+    line-height: 1.5em;
+  }
+  .button {
+    font-size: 1em;
+  }
+}
+
+@media (min-width: $phablet) {
+  //font-size
+  body {
+    font-size: 12px;
+  }
+  p, .paragraph {
+    font-size: 13px;
+  }
+  .button {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: $tablet) {
+  .modal__dialog {
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+  }
+  .modal__content {
+    width: 100vw;
+    height: 100vh;
+  }
+}
+@media (min-width: $tablet){
+  //font-size
+  body {
+    font-size: 15px;
+  }
+  p, .paragraph {
+    font-size: .95em;
+    line-height: 1.4em;
+  }
+}
+@media (min-width: $desktop){
+  //font-size
+  body {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: $xl-desktop){
+  //font-size
+  body {
+    font-size: 18px;
+  }
+}

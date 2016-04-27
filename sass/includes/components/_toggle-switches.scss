@@ -1,0 +1,189 @@
+
+//Data toggles
+fieldset.krew-data-toggle {
+  position: relative;
+  width: 120px;
+  height: 30px;
+  margin: 50px;
+  background: #e1e1e1;
+  border-radius: 6px;
+  border: 4px solid #e1e1e1;
+  padding: 0;
+  box-sizing: content-box;
+  input.input-switch {
+    position: absolute;
+    opacity: 0;
+    z-index: -10;
+  }
+  span.switch-bg {
+    position: absolute;
+    z-index: 0;
+    width: 50%;
+    height: inherit;
+    left: 50%;
+    background: $krew-blue;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    border-radius: 5px;
+  }
+  span.switch-labels {
+    position: absolute;
+    z-index: 1;
+    width: inherit;
+    height: inherit;
+
+    &:before, &:after {
+      height: 30px;
+      width: 50%;
+      line-height: 30px;
+      transition: all 0.3s;
+      -webkit-transition: all 0.3s;
+      text-align: center;
+    }
+
+    &:before {
+      content: attr(data-on);
+      left: 0;
+      position: absolute;
+      color: #b7b7b7;
+    }
+
+    &:after {
+      content: attr(data-off);
+      position: absolute;
+      right: 0;
+      color: #fff;
+    }
+  }
+  label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+  }
+  .input-switch:checked ~ .switch-bg {
+    left: 0%;
+    background: $krew-gray4;
+  }
+  .input-switch:checked ~ .switch-labels:before {
+    color: #fff;
+  }
+  .input-switch:checked ~ .switch-labels:after {
+    color: #b7b7b7;
+  }
+  //Utility Classes
+  &.krew-orange {
+    span.switch-bg {
+      background-color: $krew-orange;
+    }
+  }
+  &.krew-purple {
+    span.switch-bg {
+      background-color: $krew-purple;
+    }
+  }
+  &.krew-green {
+    span.switch-bg {
+      background-color: $krew-green;
+    }
+  }
+
+}
+
+// Setting Toggles
+fieldset.krew-settings-toggle {
+  position: relative;
+  width: 35px;
+  height: 6px;
+  margin: 50px;
+  background: #e1e1e1;
+  border-radius: 50px;
+  padding: 4px;
+  box-sizing: content-box;
+  input.input-switch {
+    position: absolute;
+    opacity: 0;
+    z-index: -10;
+  }
+  span.switch-bg {
+    position: absolute;
+    z-index: 0;
+    width: 22px;
+    height: 22px;
+    right: 0;
+    top: -4px;
+    background: $krew-blue;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    border-radius: 50px;
+  }
+  span.switch-labels {
+    position: absolute;
+    z-index: 1;
+    width: inherit;
+    height: inherit;
+
+    &:before, &:after {
+      height: 30px;
+      width: 50%;
+      line-height: 30px;
+      transition: all 0.3s;
+      -webkit-transition: all 0.3s;
+      text-align: center;
+    }
+
+    &:before {
+      content: attr(data-on);
+      left: 0;
+      position: absolute;
+      color: #b7b7b7;
+    }
+
+    &:after {
+      content: attr(data-off);
+      position: absolute;
+      right: 0;
+      color: #fff;
+    }
+  }
+  label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+  }
+  .input-switch:checked ~ .switch-bg {
+    left: 0;
+    background: $krew-gray4;
+  }
+  .input-switch:checked ~ .switch-labels:before {
+    color: #fff;
+  }
+  .input-switch:checked ~ .switch-labels:after {
+    color: #b7b7b7;
+  }
+  //Utility Classes
+  &.krew-orange {
+    span.switch-bg {
+      background-color: $krew-orange;
+    }
+  }
+  &.krew-purple {
+    span.switch-bg {
+      background-color: $krew-purple;
+    }
+  }
+  &.krew-green {
+    span.switch-bg {
+      background-color: $krew-green;
+    }
+  }
+}
